@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Projects — Kushagra Srivastava</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="scan-sweep" aria-hidden="true"></div>
+
+<div class="statusbar">
+  <div class="statusbar-inner wrap">
+    <div class="logo">ks<b>://</b>portfolio<span class="caret"></span></div>
+    <nav class="navlinks">
+      <a href="index.html">ABOUT</a>
+      <a href="experience.html">EXPERIENCE</a>
+      <a href="projects.html" aria-current="page">PROJECTS</a>
+      <a href="achievements.html">ACHIEVEMENTS</a>
+    </nav>
+  </div>
+</div>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span><em>10,000+</em> ORDERS BENCHMARKED</span>
+    <span><em>JWT</em> + BCRYPT AUTH</span>
+    <span><em>MONTE CARLO</em> SIMULATION</span>
+    <span><em>BLACK-LITTERMAN</em> ALLOCATION</span>
+    <span><em>PRICE-TIME</em> PRIORITY MATCHING</span>
+    <span><em>10,000+</em> ORDERS BENCHMARKED</span>
+    <span><em>JWT</em> + BCRYPT AUTH</span>
+    <span><em>MONTE CARLO</em> SIMULATION</span>
+    <span><em>BLACK-LITTERMAN</em> ALLOCATION</span>
+    <span><em>PRICE-TIME</em> PRIORITY MATCHING</span>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="prompt-line"><span class="sym">$</span> ls ./projects</div>
+  <h1 class="title">Projects</h1>
+  <p class="bio">Systems and data projects spanning low-latency C++, full-stack web apps, and
+  Python-based ML and quant work. Every project links straight to its source on GitHub.</p>
+
+  <section class="block" style="margin-top:40px; border-top:none; padding-top:0;">
+    <div class="projects-list">
+
+      <article class="project-card">
+        <div class="project-head">
+          <h2 class="project-name">High-Performance Multi Order Book Engine</h2>
+          <div class="project-meta">lang: <em>C++</em> · type: systems</div>
+        </div>
+        <div class="project-tagline">Level-3 order-matching engine, built for speed</div>
+        <ul>
+          <li>Engineered a low-latency Level-3 matching engine in C++, supporting Market, Limit,
+          IOC, FOK, and GTC order types.</li>
+          <li>Implemented price-time priority matching with optimized data structures for
+          high-throughput order insertion, cancellation, and execution.</li>
+          <li>Processed and benchmarked 10,000+ orders, tuning memory management and matching
+          workflows for performance-critical trading workloads.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="chip">C++</span><span class="chip">Matching Engine</span>
+          <span class="chip">Low Latency</span><span class="chip">Data Structures</span>
+        </div>
+        <div class="project-links">
+          <a class="btn primary" href="https://github.com/Kushagra2k05/MultiOrderBook" target="_blank" rel="noopener">GITHUB <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h2 class="project-name">Banking Transaction System</h2>
+          <div class="project-meta">lang: <em>JavaScript</em> · type: MERN</div>
+        </div>
+        <div class="project-tagline">Full-stack banking app with real transaction flows</div>
+        <ul>
+          <li>Built a full-stack MERN banking application with REST APIs for account management,
+          fund transfers, transaction processing, and balance tracking.</li>
+          <li>Implemented JWT authentication, role-based authorization, bcrypt password hashing,
+          and transaction validation to secure financial operations.</li>
+          <li>Built transaction-history and account-management workflows using MongoDB,
+          Express.js, React, and Node.js, with reliable data persistence and API communication.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="chip">MongoDB</span><span class="chip">Express.js</span>
+          <span class="chip">React</span><span class="chip">Node.js</span><span class="chip">JWT</span>
+        </div>
+        <div class="project-links">
+          <a class="btn primary" href="https://github.com/Kushagra2k05/Banking-System-MERN" target="_blank" rel="noopener">GITHUB <span class="arrow">↗</span></a>
+          <a class="btn" href="https://banking-system-mern.vercel.app" target="_blank" rel="noopener">LIVE DEMO <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h2 class="project-name">Robo-Advisor — Algorithmic Investment Advisory Backend</h2>
+          <div class="project-meta">lang: <em>Python</em> · type: quant / fintech</div>
+        </div>
+        <div class="project-tagline">Institutional-style portfolio construction, from scratch</div>
+        <ul>
+          <li>Built a modular financial-advisory backend delivering personalized portfolios, risk
+          analysis, and goal-based planning, modeled on institutional robo-advisory platforms.</li>
+          <li>Implemented Modern Portfolio Theory optimization (Sharpe-ratio maximization with
+          Ledoit–Wolf covariance shrinkage) and Black–Litterman allocation.</li>
+          <li>Designed a five-tier investor risk-profiling engine, a Monte Carlo simulation module
+          for outcome/variance projection, a rebalancing engine, and a SIP goal-planning calculator
+          on live Yahoo Finance market data.</li>
+          <li>Built a historical backtesting engine for cumulative weighted-portfolio growth, and a
+          composite portfolio health-score model scoring volatility, diversification, and
+          allocation completeness.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="chip">Python</span><span class="chip">NumPy / Pandas</span>
+          <span class="chip">SciPy</span><span class="chip">scikit-learn</span>
+          <span class="chip">PyPortfolioOpt</span>
+        </div>
+        <div class="project-links">
+          <a class="btn primary" href="https://github.com/Kushagra2k05/Robo-advisor-V2" target="_blank" rel="noopener">GITHUB <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h2 class="project-name">RevenueOS</h2>
+          <div class="project-meta">lang: <em>Python</em> · type: AI / fintech</div>
+        </div>
+        <div class="project-tagline">AI-powered revenue recovery for failed payments</div>
+        <ul>
+          <li>For each failed payment, estimates why it failed, whether and when to retry, and how
+          much revenue the retries recover — the headline metric is incremental revenue
+          recovered.</li>
+          <li>Pairs two ML models (an XGBoost failure classifier and a calibrated
+          recovery-probability model, ROC-AUC 0.75) with a deterministic policy engine that turns
+          predictions into actions, each with an audit trail.</li>
+          <li>Ships a live Next.js dashboard — transactions, analytics, A/B experiments on retry
+          timing, an AI merchant copilot, and a business-impact calculator — backed by FastAPI,
+          Celery/Redis async retries, JWT auth, and SHAP-based explanations.</li>
+          <li>Built on a synthetic pipeline of 100,000 simulated transactions; 34 passing pytest
+          tests cover the policy and ML logic.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="chip">Next.js</span><span class="chip">FastAPI</span>
+          <span class="chip">XGBoost</span><span class="chip">Celery / Redis</span>
+          <span class="chip">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a class="btn primary" href="https://github.com/Kushagra2k05/RevenueOS" target="_blank" rel="noopener">GITHUB <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h2 class="project-name">Movie Recommender System</h2>
+          <div class="project-meta">lang: <em>Python</em> · type: ML / NLP</div>
+        </div>
+        <div class="project-tagline">Content-based recommendations from plot, cast &amp; genre</div>
+        <ul>
+          <li>Cleans and merges movie metadata — genres, cast, director, keywords, and plot
+          overview — into a single text representation per film.</li>
+          <li>Vectorizes those representations with Bag-of-Words / TF-IDF and ranks titles by
+          cosine similarity, precomputed for fast lookups.</li>
+          <li>Given a title, returns its most similar films — e.g. querying "Inception" surfaces
+          titles like <em style="font-style:normal;color:var(--fg)">Interstellar</em>,
+          <em style="font-style:normal;color:var(--fg)">The Prestige</em>, and
+          <em style="font-style:normal;color:var(--fg)">Memento</em>.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="chip">Python</span><span class="chip">pandas</span>
+          <span class="chip">scikit-learn</span><span class="chip">NLTK</span>
+        </div>
+        <div class="project-links">
+          <a class="btn primary" href="https://github.com/Kushagra2k05/Movie-Recommender-System" target="_blank" rel="noopener">GITHUB <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-head">
+          <h2 class="project-name">IPL Prediction Model</h2>
+          <div class="project-meta">lang: <em>Jupyter Notebook</em> · type: ML</div>
+        </div>
+        <div class="project-tagline">First machine-learning project — IPL match outcomes</div>
+        <ul>
+          <li>Works from historical IPL match records and ball-by-ball delivery data to model
+          match outcomes.</li>
+          <li>The project that started it all — first hands-on machine learning build, training
+          the habits used in every project since.</li>
+        </ul>
+        <div class="project-tags">
+          <span class="chip">Python</span><span class="chip">pandas</span>
+          <span class="chip">Jupyter</span>
+        </div>
+        <div class="project-links">
+          <a class="btn primary" href="https://github.com/Kushagra2k05/IPL-Prediction-Model" target="_blank" rel="noopener">GITHUB <span class="arrow">↗</span></a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="block-label">More</div>
+    <p class="bio" style="margin-top:0;">These three are the flagship builds — the full repository
+    list, including DSA solutions and earlier ML experiments, is on GitHub.</p>
+    <div class="contact-row">
+      <a class="btn" href="https://github.com/Kushagra2k05" target="_blank" rel="noopener">VIEW ALL REPOS <span class="arrow">↗</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner wrap">
+    <span>© 2026 Kushagra Srivastava</span>
+    <span><a href="https://github.com/Kushagra2k05" target="_blank" rel="noopener">github.com/Kushagra2k05</a></span>
+  </div>
+</footer>
+
+<script src="bg.js"></script>
+</body>
+</html>
